@@ -1,0 +1,18 @@
+.fairheading{
+    color:black;
+    background-image: linear-gradient(green);
+    padding:1.25rem;
+    margin-bottom: 2rem;
+}
+
+
+.card{
+    color:aqua;
+    background-image: linear-gradient(90deg,green 0%,#156e72 100%);
+
+    .content{
+        background-color: #fff;
+        padding:10px;
+        border-radius:5px;
+    }
+}

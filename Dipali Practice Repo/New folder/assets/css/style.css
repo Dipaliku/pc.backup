@@ -1,0 +1,52 @@
+.*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+.header{
+	background-color:black;
+}
+.row,
+.row:after,.row before{
+	clear:both;
+	display;table;
+	width:100;
+}
+.col-9{
+	float:left;
+	width:cal(100*9/12);
+	padding:0 20px;
+}
+.col-3{
+	float:left;
+	width:calc(100%*3/12);
+	padding:0 20px;
+}
+.logo{
+	display:inline-block;
+	height:40px;
+	margin-top:10px;
+}
+.main{
+text-align:right;
+}
+.navbar ui li a{
+	color:red;
+	text-decoration:none;
+	text-transform:capitalize;
+	font-size:20px;
+}
+	
+.navbar ul li {
+	display:inline-block;
+	padding:20px;
+}
+.navbar ul li:hover;
+.navbar ul li:focus;
+.navbar ul li:active;
+background-color:orange;
+}
+.navbar li:active{
+	background-color:orange;
+}
+

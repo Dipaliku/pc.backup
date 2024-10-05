@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+span {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    border-radius: 5px;
+    animation: moveAround 3s linear infinite;
+}
+
+span:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+span:nth-child(2) {
+    top: 0;
+    left: 75px;
+}
+
+span:nth-child(3) {
+    top: 0;
+    right: 0;
+}
+
+span:nth-child(4) {
+    bottom: 0;
+    left: 0;
+}
+
+span:nth-child(5) {
+    bottom: 0;
+    right: 75px;
+}
+
+span:nth-child(6) {
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes moveAround {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(150px);
+    }
+}

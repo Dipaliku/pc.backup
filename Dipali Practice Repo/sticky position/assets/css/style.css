@@ -1,0 +1,23 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+P{
+	padding:20px;
+	margin:20px;
+	background-color:red;
+	color:white;
+	font-size:20px;
+}
+
+.text p{
+	margin:0;
+	background-color:black;
+}
+
+.text{
+	position:sticky;
+	top:0;
+}

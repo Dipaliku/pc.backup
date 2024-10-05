@@ -1,0 +1,51 @@
+.*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+.box{
+	height:700px;
+	width:700px;
+	background-color:red:
+	margin:20px auto;
+	position:relative;
+}
+.box1{
+	height:90px;
+	width:90px;
+	background-color:blue;
+	position:absolute;
+	animation:animation 7s ease-in-out 3;
+}
+@keyframes animation{
+	0%{
+		margin-left:0;
+		margin-top:0;
+	}
+	25%{
+		margin-left:calc(600%-90px);
+		margin-top:0;
+		background-color:black;
+
+	}
+	50%{
+		margin-left:calc(600%-90px);
+		margin-top:calc(600%-90px);
+		background-color:yellow;
+	
+	}
+	75%
+	{    
+	margin-left:0;
+	margin-top:calc(600%-90px);
+	background-color:green;
+
+	}
+	100%{
+		margin:0;
+		background-color:purple;
+	}
+}
+		
+	
+	

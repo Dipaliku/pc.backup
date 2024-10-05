@@ -1,0 +1,23 @@
+
+     <!-- baseurl/users/usersid --> 
+           
+             <div class="row">
+                <div class="col-12 text-right">
+                    <button 
+                    class="btn btn-info">Add user</button>
+                    <hr>
+                </div>
+                        <div class="col-md-4">
+                            <ul class="list-group">
+                        <li 
+                        [routerLink]="['/users',users.usersid]"
+                        *ngFor="let users of usersData"
+                        class="list-group-item"
+                        >
+                        {{users.username}} {{users.usersid}} 
+                        </li>
+                        </ul>
+                    </div>  
+                    <div class="col-md-8"> 
+                    
+                   

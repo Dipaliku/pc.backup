@@ -1,0 +1,16 @@
+*{
+	padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+}
+.box{
+	width:200px;
+	height:200px;
+	margin:5px;
+	padding:10px;
+  text-align: center;
+  font-size:50px;
+	background-color:pink;
+	border:5px skyblue;
+	color:white;
+}

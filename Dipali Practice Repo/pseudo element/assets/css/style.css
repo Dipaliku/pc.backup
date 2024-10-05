@@ -1,0 +1,38 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+p{
+	margin:20px;
+}
+ p::first-line{
+	 color:red;
+ }
+ p::first-letter{
+	 color:green;
+	 font-size:30px;
+ }
+ p::selection{
+	 background-color:green;
+	 color:gold;
+ }
+ h1{
+	 padding:20px;
+	 margin:20px;
+	 text-align:center;
+ }
+  h1::after{
+	  content: 'After';
+	  color:red;
+  }
+  h1::Before{
+	  content: 'Before';
+	  color:red;
+  }
+ 
+ h2{
+	 text-align:center;
+	
+ }
+ 

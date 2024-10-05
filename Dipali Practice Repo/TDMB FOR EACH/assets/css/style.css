@@ -1,0 +1,90 @@
+body{
+	background-color:#042b5f;
+}
+.logo{
+	width:120px;
+	display:inline-block;
+}
+.logo img{
+	width:100%;
+}
+
+
+#postsContainer .card{
+	height :100%;
+}
+
+#postsContainer .title{
+	height:33px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow: hidden;
+}
+
+.movieCard{
+	height:550px;
+	position:relative;
+	overflow:hidden;
+	
+}
+.movieCard img{
+	height:100%;
+	width:100%;
+	object-fit:cover;
+	/*it is used for showning good quality img.. otherwise image will show distorted*/
+	
+}
+/*in bootstrap there is by default bottom margin(of 1 rem)is applied to the  
+*/
+.ratingSection{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color:#fff;
+	padding:1rem;
+	background-color:rgb(3,37,65);
+	color:#fff;
+}
+
+
+.overviewSection{
+	position:absolute;
+	top:30%;
+	background:#fff;
+	padding:20px;
+	height:70%;
+	transition:all .6s ease-in-out;
+	opacity:0;
+	transform:scale(0);
+}
+
+.movieCard:hover .overviewSection,
+.movieCard:focus .overviewSection,
+.movieCard:active .overviewSection{
+	
+	opacity:1;
+	transform:scale(1);
+}
+
+
+
+
+/*
+.overviewSection{
+	position:absolute;
+	top:125%;
+	background:#fff;
+	padding:20px;
+	height:70%;
+	transition:all .6s ease-in-out;
+	opacity:0;
+}
+
+.movieCard:hover .overviewSection,
+.movieCard:focus .overviewSection,
+.movieCard:active .overviewSection{
+	top:30%;
+	opacity:1;
+}
+*/

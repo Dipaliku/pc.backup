@@ -1,0 +1,51 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:boder-box;
+	
+}
+p{
+	padding:20px;
+	margin:20px;
+	background-color:black;
+	color:white;
+}
+span{
+	display:inline-block;
+	padding:20px;
+	margin:20px;
+	background-color:pink;
+	color:red;
+}
+.infosection :first-of-type{
+	background-color:purple;	
+}
+.infosection :last-of-type{
+	background-color:blue;
+}
+
+.infosection :nth-of-type(3){
+	background-color:red;
+}
+.infosection :empty;{
+background-color:black;
+}
+.infosection :not(.text-info){
+	background-color:aqua;
+}
+.infosection p:active{
+	background-color:green;
+}
+.box{
+	height:300px;
+	width:500px;
+	background-color:yellow;
+	margin:20px;
+	padding:20px;
+	cursor:pointer;
+}
+.box:hover{
+	width:800px;
+	background-color:pink;
+	transition:0.7s ease-in-out;
+}

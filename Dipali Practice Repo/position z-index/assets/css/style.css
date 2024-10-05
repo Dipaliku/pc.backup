@@ -1,0 +1,36 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+.main{
+  width:600px;
+  height:600px;
+  background-color:orange;
+  padding:50px;
+  margin:20px auto;
+  position:relative;
+  left:40px;
+  top:40px;
+  
+}
+.box1,.box2,.box3{
+  width:400px;
+  height:400px;
+}
+.box1{
+  background-color:blue;
+  position:absolute;
+  left:150px;
+  z-index: 3;
+}
+.box2{
+  background-color:yellow;
+  position:absolute;
+  left:120px;
+  z-index:2;
+}
+.box3{
+  background-color:red;
+  z-index:1;
+}

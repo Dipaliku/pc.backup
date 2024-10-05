@@ -1,0 +1,398 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-grey);
+    color: var(--color-dark);
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5rem;
+}
+
+.header{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-between;
+}
+
+.siteinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.siteinfo h1{
+    text-transform: uppercase;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar li a:link,
+.navbar li a:visited{
+    text-transform: capitalize;
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    display: block;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.4s linear;
+}
+
+.navbar li a:hover,
+.navbar li a:focus,
+.navbar li a:active{
+    background-color: var(--color-dark);
+    color: var(--color-primary);
+}
+
+.contentarea{
+    flex-direction: column;
+}
+
+.maincontent{
+    flex-grow: 1;
+}
+
+.postsection{
+    display: flex;
+    flex-direction: column;
+}
+
+.post{
+    background-color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.post img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.post figure{
+    display: flex;
+    flex-direction: column;
+}
+
+.post figcaption h2{
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    text-align: center;
+    padding: 20px;
+    text-transform: capitalize;
+}
+
+.post figcaption p{
+    padding: 25px;
+    
+    color: var(--color-dark);
+}
+
+/*------------------------------------------------------------ Watch Now CSS -------------------------------------------------------*/
+
+.watch-card{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.watch-img img{
+    width: 100%;
+}
+
+.watch-content{
+    padding: 20px;
+}
+
+.watch-content h3{
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.watch-content p{
+    margin-bottom: 15px;
+}
+
+.watch-content p span{
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+/*------------------------------------------------------------ Watch Now CSS end-------------------------------------------------------*/
+
+
+/*------------------------------------------------------------ Download Now CSS ----------------------------------------------------*/
+
+.download-img{
+    height: 250px;
+}
+
+.download-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.download-link{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 22px;
+}
+
+.download-content{
+    background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+}
+
+.download-info{
+    background-color: var(--color-white);
+    padding: 20px;
+}
+
+.download-gener{
+    margin-bottom: 10px;
+}
+
+.download-gener h4,.download-cast h4{
+    flex: 0 0 50px;
+    align-self: center;
+}
+
+
+.download-cast img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.download-rating{
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    font-weight: 700;
+}
+
+/*------------------------------------------------------------ Download Now CSS end -----------------------------------------------*/
+
+/*------------------------------------------------------------ Gallary CSS ----------------------------------------------------*/
+
+.gall-img{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallary-img{
+    height: 350px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.gallary-img a{
+    display: block;
+    height: 100%;
+}
+
+.gallary-img a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*------------------------------------------- Gallary CSS end ----------------------------------------------------*/
+
+/*------------------------------------------- Sidebar CSS  ----------------------------------------------------*/
+
+.wedget{
+    padding: 20px;
+}
+
+.wedget-card{
+    padding: 20px;
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    text-transform: capitalize;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.wedget-card ul{
+    margin-left: 10px;
+}
+
+.wedget-card a{
+    color: var(--color-dark);
+    font-weight: bold;
+}
+
+.wedget-card h3{
+    margin-bottom: 10px;
+}
+
+/*------------------------------------------- Sidebar CSS end ----------------------------------------------------*/
+
+/*------------------------------------------- Footer CSS  ----------------------------------------------------*/
+
+.footer{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 20px;
+    text-align: center;
+}
+
+/*------------------------------------------- Footer CSS end ----------------------------------------------------*/
+
+/*----------------------------------------- CSS tab -----------------------------------------*/
+
+@media all and (min-width:768px) {
+    .postsection{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .post{
+        width: 49%;
+    }
+
+    .watch-card{
+        flex-direction: row;
+    }
+
+    .watch-img{
+        flex: 0 0 400px;
+    }
+
+    .watch-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .reverse .watch-img{
+        order: 1;
+    }
+
+    .watch-content{
+        padding: 30px;
+        align-self: center;
+    }
+
+    .download-img{
+        height: auto;
+        background-color: var(--color-dark);
+    }
+
+    .download-content{
+        flex-direction: row;
+    }
+    
+    .download-info{
+        flex-grow: 1;
+    }
+
+    .download-link, .download-rating{
+        flex: 0 0 200px;
+    }
+
+    .gall-img{
+        margin-left: -10px;
+        justify-content: space-between;
+    }
+
+    .gallary-img{
+        margin-left: 10px;
+        flex-basis: 48%;
+        flex-grow: 0;
+    }
+}
+
+/*----------------------------------------- CSS deskStop -----------------------------------------*/
+
+@media all and (min-width:1180px) {
+    .navbar ul{
+        flex-direction: row;
+    }
+
+    .navbar ul li{
+        flex-grow: 1;
+    }
+
+    .contentarea{
+        flex-direction: row;
+    }
+
+    .maincontent{
+        flex-grow: 1;
+        padding: 20px
+    }
+    
+    .sidebarsection{
+        flex: 0 0 400px;
+    }
+
+    .postsection{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .post{
+        width: 100%;
+    }
+
+    .onehalf{
+        width: 49%;
+    }
+
+    .onethird{
+        width: 32%;
+    }
+
+    .download-link, .download-rating{
+        flex: 0 0 200px;
+    }
+
+    .gallary-img{
+        flex-grow: 1;
+    }
+
+    .gallary-img:nth-child(4n + 1){
+        flex-basis: 260px;
+    }
+
+    .gallary-img:nth-child(4n + 2){
+        flex-basis: 340px;
+    }
+
+    .gallary-img:nth-child(4n + 3){
+        flex-basis: 180px;
+    }
+
+    .gallary-img:nth-child(4n + 4){
+        flex-basis: 420px;
+    }
+}

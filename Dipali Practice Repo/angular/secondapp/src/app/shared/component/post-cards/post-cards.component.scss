@@ -1,0 +1,12 @@
+.title,.content{
+    height:33px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+
+.content{
+    height: 100px;
+    white-space: normal;
+}

@@ -1,0 +1,27 @@
+
+<!-- baseurl/products/productId
+ currenturl==baseurl/products -->
+<div class="row">
+    <div class="col-12 text-left">
+        <button 
+        routerLink="addproduct"
+        class="btn btn-info">Add product</button>
+        <hr>
+    </div>
+            <div class="col-md-4">
+                <ul class="list-group" *ngIf="productdata; else noproducts">
+            <li 
+            [routerLink]="[product.pid]"
+            *ngFor="let product of productdata"
+            class="list-group-item">
+            {{product.pname}} {{product.pid}} 
+            </li>
+            </ul>
+        </div>   
+        
+        <ng-template #noproducts>    
+            <p class="alert alert-info">
+                No products data
+                </p>
+                </ng-template>        
+

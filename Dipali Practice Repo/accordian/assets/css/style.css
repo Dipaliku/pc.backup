@@ -1,0 +1,42 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+.heading{
+	padding:10px;
+	color:white;
+	background-color:red;
+	cursor:pointer;
+	margin:0;
+	position:relative;
+}
+
+.heading.active,
+.heading:hover,
+.heading:focus,
+.heading:active{
+	background-color:green;
+}
+
+.content{
+	border:2px solid black;
+	padding:10px;
+	display:none;
+}
+
+.heading.active + .content{
+	display:block;
+}
+
+.heading:after{
+	content:"+";
+	position:absolute;
+	right:15px;
+	top:7px;
+}
+
+.heading.active:after{
+	content:"-";
+}

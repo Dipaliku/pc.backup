@@ -1,0 +1,15 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+.bike {
+	height:350px;
+	width:350px;
+	border:2px solid red;
+	border-radius:5px;
+	margin:10px; 
+	padding:2px;
+
+}

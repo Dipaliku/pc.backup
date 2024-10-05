@@ -1,0 +1,54 @@
+*{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+
+.row{
+	clear:both;
+	display:table;
+	width:100%;
+}
+
+.col{
+	float:left;
+	padding:0 15px;
+	width:calc(100% * 2 /12);
+}
+
+.box{
+	max-width:90%;
+	height:200px;
+	background-color:blue;
+	color:red;
+	margin-bottom:30px;
+	font-size:30px;
+	text-align:center;
+}
+
+@media all and (max-width :1200px){
+	.col{
+		width:calc(100% * 4 / 12 );
+	}
+	.box{
+		background-color:pink;
+	}
+}
+
+@media all and (max-width :900px){
+	.col{
+		width:50%;
+	}
+	.box{
+		background-color:pink;
+	}
+}
+
+@media all and (max-width :600px){
+	.col{
+		width:100%;
+	}
+	.box{
+		background-color:pink;
+	}
+}

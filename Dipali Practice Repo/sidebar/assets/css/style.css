@@ -1,0 +1,33 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+ .sidebar{
+	 width:320px;
+	 height:100vh;
+	 background-color:aqua;
+	 color:white;
+	 position:fixed;
+	 top:0;
+	 left:0;
+ }
+  i{
+	  color:white;
+	  padding:30px;
+	  font-size:30px;
+ 	  
+  }
+  
+ ul{
+	 padding-top:50px;
+ }
+ 
+ li{
+	 padding:30px;
+	 font-size:30px;
+	 cursor:pointer;
+	 text-align:center;
+ }
+	 
+	

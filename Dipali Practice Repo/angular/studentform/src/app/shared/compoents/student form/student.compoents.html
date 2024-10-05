@@ -1,0 +1,73 @@
+<h2> student information form</h2>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <form #signup ="ngform" (ngsubmit)="onsignup()">
+                        <div class="form-group">
+                            <label for="studentname">studentname</label> 
+                            <input type="text" ngmodel name="studentname" required pattern="[a-za-z]+" minlength="6"
+                            maxlength="12"  #studentname="ngmodel" class="form-control">
+                            <span *ngif="studentname.touched && studentname.haserror('required')" class="text-danger">studentname
+                                is mandatory field!!!</span>
+
+                                <ng-container *ngif="studentname.dirty">
+                                    <span class="text-danger" *ngif="studentname.haserror('pattern')"studentname
+                                     should not include numbers and special characters
+                                     >
+                            </span> 
+                            <span *ngif="studentname.haserror('minlength')" class="text-danger">minimum length of studentname
+                                should be{{studentname.error?.[minlength].requiredlength}}
+                                and actual length is {{studentname.error?.['minlenth'].actuallenth}}
+                            </span>
+                            </ng-container>
+                        </div>
+                        <doiv class="form-group">
+                            <label for="email">email</label>
+                            <input type="text" #email="ngmodel" required pattern="[a-za-z0._%]+@\.[a-za-z]{2,3}$" ngmodel name="email"
+                            class="form-control">
+                            <span *ngif="email.invalid && email.touched" class="text-danger">email is a mandatory field!!!</span>
+                            <span *ngif="email.dirty&& email.haserror('pattern')"class="text-danger">invalid email pattern</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="secertquestion">secertquestion</label>
+                                <select name="secrectquestion" required ngmodel class="form-control">
+                                    <option value="favbook">favourite book</option>
+                                    <option value="favhero">favourite hero</option>
+                                   </select>
+                                   </div>
+                                   <div class="form-group">
+                                    <label for="anse">answer</label>
+                                    <input name="ans" required ngmodel type="text" class="form-control">
+                                   </div>
+                                   <div class="form -group">
+                                    <label for="gender">
+                                        <input type="checkbox" name="gender" ngmodel>
+                                        <input type="checkbox" name="male" ngmodel>
+                                        <input type="checkbox" name="female" ngmodel>
+                                        gender
+                                    </label>
+                                </div>
+                                <div class="form-group" *ngfor="let mode of contactarr">
+                                    <label [for]="mode.moc">{{mode.moc}}
+                                    <input type="radio"
+                                    name="modeofcontact"
+                                    [id]="mode.id"
+                                    [value]="mode.moc"
+                                    ngmodel
+                                    >
+                                    </label>
+                                       </div>
+                                       <button class="btn-btn-primary btn-block btn-sm">submit</button>
+                    </form>
+                    <hr>
+                    <button (click)="onedit()"
+                    class="btn btn-primary">edit</button>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    

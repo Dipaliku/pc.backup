@@ -1,0 +1,12 @@
+<app-passenger-count
+[gettotalcount]="totalcount"
+[getcheckedincount]="checkincount"
+class="mb-5"></app-passenger-count>
+<ul class="list-group mb-5">
+    <li class="list-group-item"*ngfor="let passenger of passarr">
+        {{passenger.fullname}}
+    </ul>
+    <app-passenger-card
+    [passobj]="passenger"
+  *ngfor="let passenger of passarr">
+        </app-passenger-card>

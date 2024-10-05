@@ -1,0 +1,86 @@
+ul,ol{
+	list -style:none;
+}
+a,a:hover,a:active,a:focus,a:link,a:visited{
+	text-decoration:none;
+	display:inline-block;
+}
+.container{
+	width:1100px;
+	height:500px;
+	border:2px solid #fff;
+	margin:0 auto;
+}
+.row{
+	display:table;
+	clear:both;
+	width:100px;
+}
+div[class^=col-"]{
+	float :left;
+	padding:0 15px;
+}
+.col-offset-2{
+	margin-left:calc(100%2/12);
+}
+
+
+
+.col-6{
+	width:calc(100%6/12);
+	float:left;
+	padding:0 15px;
+}
+.col-12{
+	width:calc(100%12/12);
+}
+.col-10{
+	width:calc(100%10/12);
+}
+.col-8{
+	width:calc(100%8/12);
+}
+.col-7{
+	width:calc(100%7/12);
+}
+.col-6{
+	width:calc(100%6/12);
+}
+.col-4{
+	width:cal(100%4/12);
+}
+.aligncenter{
+	text-align:center;
+}
+.alignleft{
+	text-align:left;
+}
+.alignrirgt{
+text-align:right;
+}
+.mt-10{
+	margin-top:10px;
+}
+.mt-20{
+	margin-top-20px;
+}
+.mt-30{
+ margin-top:30px;
+}
+.mt-40 {
+	margin-top:40px;
+}
+.mb-10{
+	margin-bottom:10px;
+}
+.mb-20{
+	margin-bottom:20px;
+}
+.mb-30{
+	margin-bottom:30px;
+}
+.mb-40{
+	margin-bottom:40px;
+}
+
+	

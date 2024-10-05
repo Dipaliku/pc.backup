@@ -1,0 +1,13 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+p{
+  background-color:red;
+  padding:20px;
+  margin:30px;
+}
+.text-info p{
+  background-color:black;
+}

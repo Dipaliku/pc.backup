@@ -1,0 +1,57 @@
+
+
+<h3>mobile </h3>
+<div class="row">
+    <div class="col-12 mb-4" *ngfor="let mobileobj of mobilearr">
+    <div class="card"
+         [ngStyle]="{
+            'NOAvl':!mobileobj.isAvailable
+         }"
+         >
+         <p class="noprdAvl d-flex justify-content align-item-center" *ngif="!mobileobj.isAvailable">
+            product is not Available
+         </p>"
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="imagcontainer">
+              <img
+              *ngif="mobileobj.image;else nomobileimg" 
+               [src]="mobileobj.image"
+                        class="img-fluid"
+                        [alt]="mobileobj.name" 
+                        [title]="mobileobj.name"
+                        />
+              <img src="https://i.insider.com/6116b065c040ad0018ce3ea1?width=1009&format=jpeg" class="image-fluid"/>
+                        </ng-template>
+
+                        
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h3 class="display-3">
+                        {{mobileobj.name}}
+
+                        <small class="rating text-white p-2"
+                        [ngClass]="{
+                            'bg-sucess':mobileobj.rating>=4,
+                            'bg-waring':mobileobj.rating>=3&& mobileobj.rating<4,
+                            'bg-danger':mobileobj.rating<3
+                        }
+                        "
+                        ></small>
+                            {{mobileobj.rating}}
+                        </span>
+    
+                    </h3>
+                    {{mobileobj.isAvailable}}
+                </div>"
+            </div>
+            product name
+        </div>
+    </div>
+    <div>
+
+    </div>
+        

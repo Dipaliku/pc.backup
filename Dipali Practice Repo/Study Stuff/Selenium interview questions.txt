@@ -1,0 +1,414 @@
+In a Selenium interview for experienced candidates, the questions tend to be more in-depth and focused on practical application and problem-solving. Interviewers may expect candidates to have a good understanding of Selenium and its various components, as well as real-world experience using Selenium for test automation. Here are some common questions that may be asked in a Selenium interview for experienced candidates:
+
+Framework Design and Implementation: Explain the test automation framework you have used or implemented in your previous projects. Discuss the architecture, advantages, and challenges faced during its implementation.
+
+Locators and Handling Dynamic Elements: How do you locate web elements using different locators in Selenium? How do you handle dynamic elements or elements with changing attributes?
+
+Synchronization and Waits: What are implicit waits and explicit waits in Selenium? When and how do you use them to handle synchronization issues?
+
+Handling Pop-ups and Alerts: How do you handle pop-ups and browser alerts in Selenium?
+
+Handling Frames and Windows: How do you interact with elements inside frames? How do you switch between multiple browser windows?
+
+Test Data Management: How do you manage test data in your test automation scripts? Do you use any data-driven approaches?
+
+Handling Dropdowns and Multiple Selects: How do you interact with dropdown lists and handle multiple selections in Selenium?
+
+Handling Keyboard and Mouse Actions: How do you perform keyboard and mouse actions using Selenium?
+
+Screenshot and Test Reporting: How do you capture screenshots during test execution? How do you generate test reports?
+
+Handling Browser Cookies: How do you handle browser cookies in Selenium?
+
+Parallel Test Execution: Have you worked on parallel test execution with Selenium? How do you achieve parallelism in your test suite?
+
+Handling Authentication Pop-ups: How do you handle basic authentication pop-ups in Selenium?
+
+Cross-Browser Testing: How do you perform cross-browser testing using Selenium? What challenges have you faced in cross-browser testing?
+
+Page Object Model (POM): Have you used the Page Object Model in your automation framework? How does it improve test maintenance?
+
+Troubleshooting: How do you handle issues like element not found, stale element reference, or other exceptions in Selenium?
+
+TestNG or JUnit: Which testing framework have you used (TestNG or JUnit) and what are its advantages?
+
+Integration with Continuous Integration (CI) Tools: Have you integrated your Selenium tests with CI tools like Jenkins? How do you trigger automated tests in a CI environment?
+
+Browser Profiling and Performance Testing: How do you analyze browser performance using Selenium?
+
+Browser-specific Handling: Have you encountered any browser-specific issues during test execution? How did you handle them?
+
+==============================================================================================================================================
+
+Best Practices: What are some best practices you follow when writing Selenium test automation code?
+Expected Conditions that can be used in Selenium Explicit Wait
+alertIsPresent()
+elementSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+frameToBeAvaliableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+invisibilityOfElementWithText()
+presenceOfAllElementsLocatedBy()
+presenceOfElementLocated()
+textToBePresentInElement()
+textToBePresentInElementLocated()
+textToBePresentInElementValue()
+titleIs()
+titleContains()
+visibilityOf()
+visibilityOfAllElements()
+visibilityOfAllElementsLocatedBy()
+visibilityOfElementLocated()
+
+====================================================================================
+================================================================
+What are the different types of Alerts/popups?
+While automating any web application, Selenium WebDriver may encounter alerts that can either be application dependant or the Operating system dependant on which the user is working. Based on these categorizations, we can divide the alerts majorly into the following categories:
+
+Windows/OS Alerts: Window-based alerts are system-generated alerts/popups. The developers invoke the operating system APIs to show these alerts/dialogue-boxes. Handling these alerts in Selenium is a little tricky and beyond the WebDriver's capabilities, as Selenium is an automation testing tool for web applications only, and we need third party utility to automate window based popups.  A few of those utilities are AutoIT and Robot Class in Java. A sample operating system based alert will look as follows and are majorly called Dialog-Boxes:
+
+Web/Javascript /Browser-based Alerts: Web/Browser based alerts are primarily called Javascript alerts and are those alerts that are browser dependant. These alerts are majorly called Popups.
+In this tutorial, we will be focusing majorly on browser-based alerts, as they are more prevalent in this web era and are compatible with automation using Selenium WebDriver.
+
+Let's now see what the various web-alerts which we can see on multiple web applications are.
+
+What are the various kinds of alerts provided by Web Applications?
+As we discussed, there are various types of alerts that the developers can implement on web applications. Each of these alerts/popups needs different kinds of actions to handle these alerts. Let's see what these different types of alerts that the web applications provide are:
+
+Simple alert: These alerts are just informational alerts and have an OK button on them. Users can click on the OK button after reading the message displayed on the alert box. A simple alert box looks like below:
+
+Prompt Alert: In Prompt alerts, some input requirement is there from the user in the form of text needs to enter in the alert box. A prompt alert box is displayed like below, where the user can enter his/her username and press the OK button or Cancel the alert box without entering any details .
+
+Confirmation Alert: These alerts get some confirmation from the user in the form of accepting or dismissing the message box. They are different from prompt alerts in a way that the user cannot enter anything as there is no text-box available. Users can only read the message and provide the inputs by pressing the OK/Cancel button.
+Let's see how we can handle and automate these alerts using Selenium WebDriver:
+
+How to handle Alerts/popups using Selenium WebDriver?
+As we know, whenever we are executing any of the automation scripts using Selenium WebDriver, the WebDriver always has the focus on the main browser window and will run all the commands on the main browser window only. But, whenever an alert/popup appears, it opens up a new window. So, for handling the Alerts using Selenium WebDriver, the focus need to be shifted to the child windows opened by the Alerts. To switch the control from the parent window to the Alert window, the Selenium WebDriver  provides the following command:
+
+driver.switchTo( ).alert( );
+Once we switch the control from the main browser window to the alert window,  we can use the methods provided by  Alert Interface to perform various required actions. For example, accepting the alert, dismissing the alert, getting the text from the alert window, writing some text on the alert window, and so on.
+
+To handle Javascript alerts, Selenium WebDriver provides the package org.openqa.selenium.Alert  and exposes the following methods:
+
+Void accept(): This method clicks on the 'OK' button of the alert box.
+driver.switchTo( ).alert( ).accept();
+Void dismiss(): We use this method when the 'Cancel' button clicks in the alert box.
+driver.switchTo( ).alert( ).dismiss();
+String getText(): This method captures the message from the alert box.
+driver.switchTo().alert().getText();
+Void sendKeys(String stringToSend): This method sends data to the alert box.
+driver.switchTo().alert().sendKeys("Text");
+
+How to handle a Simple Alert using Selenium WebDriver?
+To understand how we can handle the Simple Alerts using Selenium WebDriver, consider the following scenario:
+
+In this scenario, we have used demoqa.com to illustrate simple alert handling.
+
+1st Step: Launch the website "https://demoqa.com/alerts".
+2nd Step: Click on the "click me" button, as highlighted by the arrow, to see the simple alert box.
+3rd Step: Simple alert box opens where the user has to accept it by hitting the OK  button.
+The below code snippet shows how we can handle the mentioned alert using Selenium WebDriver:
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class simplealert{
+ public static void main(String[] args) {
+   System.setProperty("webdriver.chrome.driver","./src/resources/chromedriver");
+    WebDriver driver = new ChromeDriver();
+    driver.get("https://demoqa.com/alerts");
+    driver.manage().window().maximize();
+  // This step will result in an alert on screen
+    driver.findElement(By.id("alertButton")).click();
+    Alert simpleAlert = driver.switchTo().alert();
+    simpleAlert.accept();
+  }
+}
+
+Where,
+
+The creation of the WebDriver instance happens, and the launch of the browser opens the website.
+Reference variable is creates for Alert class which references to the alert by Alert simpleAlert = driver.switchTo().alert();.
+To switch the control to the recently opened pop up window Driver.switchTo().alert(); is used
+Alert is accepted using alert.accept(); method.
+How to handle a Prompt Alert using Selenium WebDriver?
+For understanding the handling the "Prompt Alert" using Selenium WebDriver, consider the following scenario:
+
+1st Step: Launch the website "https://demoqa.com/alerts".
+
+2nd Step: Click on the "click me" button, as highlighted in the following screenshot, to see the prompt alert popup box.
+3rd Step: Prompt alert box opens where the user can enter text in the text box. After entering user can accept or dismiss the alert box.
+
+Note: In Selenium Webdriver, locators like XPath, CSS, etc. identify and carry out operations on a web page. In case locators do not work, we can use JavaScriptExecutor to achieve the desired operation on a web element.
+4th Step: When the user has successfully entered the text in the text box and accepted the alert, the parent window displays the operation performed "You entered Test User".
+Below code-snippet shows a sample code, which explains how to handle prompt alerts  using Selenium WebDriver:
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class promptalert {
+ public static void main(String[] args) throws InterruptedException {
+   System.setProperty("webdriver.chrome.driver","./src/resources/chromedriver");
+   WebDriver driver = new ChromeDriver();
+   driver.get("https://demoqa.com/alerts");
+   driver.manage().window().maximize();
+  // This step will result in an alert on screen
+   WebElement element = driver.findElement(By.id("promtButton");
+   ((JavascriptExecutor) driver).executeScript("arguments[0].click()", element);
+   Alert promptAlert  = driver.switchTo().alert();
+   String alertText = promptAlert.getText();
+   System.out.println("Alert text is " + alertText);
+  //Send some text to the alert
+   promptAlert.sendKeys("Test User");
+   promptAlert.accept();
+  }
+}
+
+Where,
+
+Once the website launches, and we click the "prompt button", the prompt alert box opens.
+To located the WebElement we have used javascript executor here ((JavascriptExecutor) driver).executeScript("arguments[0].click()", element);.This method executes JavaScript in the context of the currently selected frame or window.
+*It will read the text from the Alert box using String alertText = promptAlert.getText(); the value stores in the String format.
+sendKeys(); the method enters the text in the Prompt alert box, and then accepts the alert using alert.accept() method. The below screen shows the text fetched from a prompt alert box.
+How to handle a Confirmation Alert using Selenium WebDriver?
+For understanding the handling the "Confirmation Alert" using Selenium WebDriver, consider the following scenario:
+
+1st Step: Launch the website "https://demoqa.com/alerts".
+
+2nd Step: Click on the "click me" button, as highlighted in the following screenshot, to see the confirmation alert box.
+3rd Step: Once the confirmation box is open, the user can either accept or dismiss the alert box using Alert.accept(); or Alert.dismiss(); method.
+4th Step:  When the user has accepted the alert, then the parent window displays the operation performed on the confirmation alert box.
+Below is the code snippet, which shows how to handle the confirmation alerts using Selenium WebDriver:
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class alerts {
+ public static void main(String[] args) {
+  System.setProperty("webdriver.chrome.driver","./src/resources/chromedriver");
+  WebDriver driver = new ChromeDriver();
+  driver.get("https://demoqa.com/alerts");
+  driver.manage().window().maximize();
+ // This step will result in an alert on screen
+  WebElement element = driver.findElement(By.id("confirmButton"));
+  ((JavascriptExecutor) driver).executeScript("arguments[0].click()", element);
+  Alert confirmationAlert = driver.switchTo().alert();
+  String alertText = confirmationAlert.getText();
+  System.out.println("Alert text is " + alertText);
+  confirmationAlert.accept();
+ }
+}
+As we can see here, the maximum of the code is similar; the only difference is input from the user is not possible like a prompt alert box. Hence, we do not use it. We can either accept or dismiss the alert message box. Here we have accepted the alert using Alert.accept(); method.
+
+How to handle unexpected Alerts using Selenium WebDriver?
+Sometimes when we are browsing any web application, unexpected alerts occur due to some error or some other reasons. This kind of alert does not display every time you open the site, but they surface only at random intervals. If you have created an automation test case for such pages and not handled this kind of alerts, then your script will fail immediately if such unexpected alert pop up is displayed.
+
+We have to handle these unexpected alerts specifically, and for that, we can use the try-catch block.
+
+Note: If we write direct code(without try-catch) to accept or dismiss the alert, and If the alert does not appear, then our test case will fail to throw any exception in Selenium like timeout Exception. Try catch block can handle both situations.
+
+The following code demonstrates how we handle unexpected alerts in Selenium using a try-catch block.
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class alerts {
+    public static void main(String[] args) {
+        System.setProperty("webdriver.chrome.driver","./src/resources/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://demoqa.com/alerts");
+
+        try {
+            driver.findElement(By.id("timerAlertButton")).click();
+            WebDriverWait wait = new WebDriverWait(driver,10);
+            wait.until(ExpectedConditions.alertIsPresent());
+            Alert simpleAlert = driver.switchTo().alert();
+            simpleAlert.accept();
+            System.out.println("Unexpected alert accepted");
+        } catch (Exception e) {
+            System.out.println("unexpected alert not present");
+        }
+        driver.quit();
+    }
+}
+Let's understand this step by step:
+
+Launch the browser and open the site "https://demoqa.com/alerts".
+Locate the WebElement "timerAlertButton" and click on it
+We have used Explicit wait here as the driver will wait for 10 seconds to see if an alert occurs and. It will check for the alert using the try-catch block. We use Explicit wait as WebDriverWait wait = new WebDriverWait(driver,10) ; and wait.until(ExpectedCondition.alertIsPresent());
+If the alert is present, then we will accept it using driver.switchTo().alert().accept(); method else it will go to catch block and print the message "unexpected alert not present".
+Key Takeaways
+Alerts are small popup windows that display the message/notifications and notify the user with some information or may ask for permission on certain kinds of operation.
+There are two types of alerts: Web/Javascript/browser-based alerts and Windows/OS-based alerts in Selenium. Web-based alerts can further bifurcate into Simple alerts, Prompt alerts, and confirmation alerts.
+These alerts are significantly visible in online application forms, banking websites, and social networking/Email service provider websites like Gmail. Every QA must have encountered such alerts while automating the application under test.
+
+================================================================================================================================================
+********************************************************************************************
+What are the different methods used for window handling in Selenium?
+Selenium WebDriver provides various methods for handling of windows. Few of them are:
+
+getWindowHandle( ): When a website opens, we need to handle the main window i.e the parent window using driver.getWindowHandle( ); method. With this method, we get a unique ID of the current window which will identify it within this driver instance. This method will return the value of the String type.
+getWindowHandles( ): To handle all opened windows which are the child windows by web driver, we use driver.getWindowHandles( ); method. The windows store in a Set of String type and here we can see the transition from one window to another window in a web application. Its return type is Set <String>.
+switchto(): Using this method we perform switch operation within windows.
+action: This method helps in performing certain actions on the windows.
+How do we handle child windows in Selenium?
+As seen in the above example if we have child windows in any web application then interaction with them without proper window handling will lead to an exception. For this we have different methods explained above, we will use them here with a practical example.
+
+We will be using getWindowHandle( ) and getWindowHandles( ) method here along with switchto() method. In the snapshot below, we have highlighted the two main methods for window handling in Selenium.
+
+Window handle methods
+
+Taking the same example of " ToolsQA Demo Site" above where exception was encountered, we will show how it will be executed successfully. After opening the URL, we will click on the "New window"  button within the application, a new browser window opens. We will read the text from the newly opened window i.e " This is sample page" and will print it.
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.Iterator;
+import java.util.Set;
+
+public class childWindow {
+    public static void main(String[] args) {
+        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://demoqa.com/browser-windows");
+
+        // Open new child window within the main window
+        driver.findElement(By.id("windowButton")).click();
+
+        //Get handles of the windows
+        String mainWindowHandle = driver.getWindowHandle();
+        Set<String> allWindowHandles = driver.getWindowHandles();
+        Iterator<String> iterator = allWindowHandles.iterator();
+
+        // Here we will check if child window has other child windows and will fetch the heading of the child window
+        while (iterator.hasNext()) {
+            String ChildWindow = iterator.next();
+                if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
+                driver.switchTo().window(ChildWindow);
+                WebElement text = driver.findElement(By.id("sampleHeading"));
+                System.out.println("Heading of child window is " + text.getText());
+            }
+        }
+    }
+}
+Launch the website "https://demoqa.com/browser-windows" and click on the windows - "windowbutton".
+String mainwindow = driver.getWindowHandle(): It stores parent window value in a unique identifier of string type.
+Set<String> s = driver.getWindowHandles(): All child windows are stored in a set of strings.
+Iterator<String> i = s.iterator() : Here we will iterate through all child windows.
+if (!MainWindow.equalsIgnoreCase(ChildWindow)) : Now check them by comparing the main window with the child windows.
+driver.switchTo().window (ChildWindow): Switch to the child window and read the heading.
+WebElement text = driver.findElement(By.id("sampleHeading")): Find the element and store in a web element through which we will get the text of heading using gettext() method.
+The output of the code will print the text “This is a sample page ” as shown below:
+
+Output
+
+So this way, we switched the context to the child window and then printed the text in the child windows.
+
+How to handle multiple windows in Selenium?
+In Selenium, when we have multiple windows in any web application, the approach may need to switch control among several windows i.e from one window to another to perform any action and we can achieve this by using switchto(); method. Furthermore, we will be using window handle here to store the unique value of the windows and perform window handling using Selenium.
+
+Note: If you have to switch between tabs then also you have to use the same approach.
+
+Let's understand this with the help of the code below:
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.Iterator;
+import java.util.Set;		
+
+public class multipleChildWinows {				
+  public static void main(String[] args) throws InterruptedException {									
+    System.setProperty("webdriver.chrome.driver","./src/main/resources/chromedriver");
+    WebDriver driver = new ChromeDriver();
+    driver.manage().window().maximize();
+    driver.get("https://demoqa.com/browser-windows");
+
+    // Opening all the child window
+    driver.findElement(By.id("windowButton")).click();
+    driver.findElement(By.id("messageWindowButton")).click();
+    
+    String MainWindow = driver.getWindowHandle();
+    System.out.println("Main window handle is " + MainWindow);
+
+    // To handle all new opened window
+    Set<String> s1 = driver.getWindowHandles();
+    System.out.println("Child window handle is" + s1);
+    Iterator<String> i1 = s1.iterator();
+
+    // Here we will check if child window has other child windows and when child window
+    //is the main window it will come out of loop.
+      while (i1.hasNext()) {
+          String ChildWindow = i1.next();
+          if (!MainWindow.equalsIgnoreCase(ChildWindow)) {
+              driver.switchTo().window(ChildWindow);
+              driver.close();
+              System.out.println("Child window closed");
+           }
+       }
+    }
+}
+Launch the website "https://demoqa.com/browser-windows" and click on the two popup windows - "windowbutton" and "messagewindowbutton".
+String Mainwindow = driver.getWindowHandle(): It stores parent window value in a unique identifier of string type.
+Set<String> s1 = driver.getWindowHandles(): All child windows are stored in a set of strings.
+Iterator<String> i1 = s1.iterator() : Here we will iterate through all child windows.
+if (!MainWindow.equalsIgnoreCase(ChildWindow)) : Now close them by comparing the main window with the child windows.
+driver.switchTo().window(ChildWindow): It will also print when the child windows close.
+driver.close():  When the main window is the only active window then it will come out of the loop and window will close.
+How To Handle Window in Selenium
+
+Once the Selenium WebDriver instantiates, allocation of a unique alphanumeric id happens to the window called window handle and it identifies the browser windows. In the above code, parent window and one of the child window has the same ID, the other two windows have a different ID. This is because a parent window is the child of itself. But notice that only two closed due to the same reason. Since this id is distinctive, the Selenium WebDriver use such it to switch between different windows (or tabs). The id retains until the session closes.
+
+How do we switch back to the parent window from the child windows in Selenium?
+Once you have switched to the child window,  the Selenium WebDriver will hold the current context of it, and you will not be able to identify elements present in the parent window. To access the elements of the parent window we have to shift the focus back on it. We can achieve this as shown in the below code snippet:
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.Iterator;
+import java.util.Set;
+
+public class switchbackParentWinow {
+    public static void main(String[] args) {
+        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://demoqa.com/browser-windows");
+        
+        driver.findElement(By.id("windowButton")).click();
+        String mainwindow = driver.getWindowHandle();
+        Set<String> s1 = driver.getWindowHandles();
+        Iterator<String> i1 = s1.iterator();
+        
+        while (i1.hasNext()) {
+            String ChildWindow = i1.next();
+                if (!mainwindow.equalsIgnoreCase(ChildWindow)) {
+                driver.switchTo().window(ChildWindow);
+                WebElement text = driver.findElement(By.id("sampleHeading"));
+                System.out.println("Heading of child window is " + text.getText());
+                driver.close();
+                System.out.println("Child window closed");
+            }
+        }    
+  
+        //  Switch back to the main window which is the parent window.
+        driver.switchTo().window(mainwindow);
+        driver.quit();
+    }
+}
+The output of the above code is shown below:
+
+output
+

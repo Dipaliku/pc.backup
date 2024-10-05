@@ -1,0 +1,13 @@
+<p class="alert-alert-info">
+    The user is <strong>{{usersobj?.username}}</strong> and its userRole is  
+    <strong> {{usersobj?.userRole | titlecase}}</strong> 
+    </p>
+<!-- 
+    <button 
+    [routerLink]="['/users',usersid,'edituser']"
+    class="btn btn-info">Edit user</button>
+    -->
+    <button
+    routerLink="edituser"
+    class="btn btn-info"></button>
+    

@@ -1,0 +1,42 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+.mainHeader .navbar-default {
+    background-color: black;
+    border-color: black;
+    border-radius: 0;
+}
+
+.mainHeader .navbar-brand {
+    padding: 3px 15px;
+}
+
+.mainHeader .navbar-default .navbar-nav>.active>a, 
+.mainHeader .navbar-default .navbar-nav>.active>a:focus, 
+.mainHeader .navbar-default .navbar-nav>.active>a:hover, 
+.mainHeader .navbar-default .navbar-nav>.open>a, 
+.mainHeader .navbar-default .navbar-nav>.open>a:focus, 
+.mainHeader .navbar-default .navbar-nav>.open>a:hover {
+    background-color: orange;
+}
+
+.mainHeader .navbar-default .navbar-nav>li>a:focus, 
+.mainHeader .navbar-default .navbar-nav>li>a:hover {
+    color: #333;
+    background-color: orange;
+}
+
+.mainHeader .navbar-default .navbar-nav>li>a {
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+@media screen and (min-width : 768px){
+    .mainHeader .navbar-nav li {
+        margin-left: 10px;
+    }
+}

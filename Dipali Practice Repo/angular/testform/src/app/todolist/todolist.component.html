@@ -1,0 +1,11 @@
+<ul class="list-grroup" *ngif="gettodoARRAY.length >0;else NOtodo">
+    <li class="list-group-item"
+      *ngfor="let TODO of gettodoARRAY">
+      {{'todo.todoitem'}}
+    </li>
+    </ul>
+    <ng-template #NOTtodoS>
+      <p class="alert alert-waring">
+        NO TODO ITEM ADDED YET!!!
+      </p>
+    </ng-template>

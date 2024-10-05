@@ -1,0 +1,37 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border -box;
+}
+a{
+	padding:30px;
+	margin:30px;
+	display:inline-block;
+	text-decoration:none;
+	font size:30px;
+	color:white;
+}
+a[href]{
+	background-color:red;
+}
+a[href="https://www.google.co.in/"]{
+	background-color:blue;
+}
+a [href^="https://www.amazon.co.in/"]{
+	background-color:purple;
+}
+a[href$="www.facebook.com/"]{
+	background-color:black;
+}
+a[href*="flipkart"]{
+	background-color:pink;
+}
+a[target~="_self"]{
+	background-color:green;
+}
+a[targetl="blank"]{
+background-color:skyblue;
+}
+	
+	
+	

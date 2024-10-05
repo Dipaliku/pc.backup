@@ -1,0 +1,12 @@
+
+<form #todoform="ngForm" (ngSubmit) ="ontodoAdd()">
+    <div class="form-group">
+        <label for="todoitem">todo item</label>
+        <input name="todoitem" required ngModel type="text" class="from-control"/>
+        </div>
+        <button type="btn-btn-primary btn-block btn-sm">add todo</button>
+           <ul>
+            <li *ngfor="let todo of todos">{{todo}}</li>
+            </ul>
+            </form>
+            

@@ -1,0 +1,32 @@
+.mainHeader .navbar-default {
+    background-color: #333;
+    border-color: #000;
+    border-radius: 0;
+}
+
+.mainHeader .navbar-brand {
+    padding: 5px 15px;
+}
+
+.mainHeader .navbar-default .navbar-nav>li>a {
+    color: #FFF;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.mainHeader .navbar-nav>.active>a,
+.mainHeader .navbar-nav>.active>a:focus,
+.mainHeader .navbar-nav>.active>a:hover,
+.mainHeader .navbar-nav>li>a:focus,
+.mainHeader .navbar-nav>li>a:hover,
+.mainHeader .navbar-nav>.open>a,
+.mainHeader .navbar-nav>.open>a:focus,
+.mainHeader .navbar-nav>.open>a:hover  {
+    background-color: orange;
+}
+
+@media screen and (min-width : 768px){
+    .mainHeader .navbar-nav>li {
+        margin-left: 10px;
+    }
+}

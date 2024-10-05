@@ -1,0 +1,16 @@
+*{
+  box-siz:border-box;
+}
+p{
+   border:5px blue;
+   width:300px;
+   height:300px;
+   margin:30px;
+}
+
+span{
+	border:5px blue;
+    width:300px;
+    height:300px;
+    margin:30px;
+}

@@ -1,0 +1,26 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+.box > div{
+	height:300px;
+	border:2px solid black;
+	border-radius:8px;
+	margin-bottom:15px;
+}
+.red>div{
+	background-color:red;
+}
+.blue>div{
+	background-color:blue;
+}
+
+.black>div{
+	background-color:black;
+}
+
+.skyblue>div{
+	background-color:skyblue;
+}

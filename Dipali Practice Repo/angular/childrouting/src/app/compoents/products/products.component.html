@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group" *ngIf="productsdata;else noproducts">
+         <li
+         [routerLink]="[product.pid]"
+         *ngFor="let product of productsdata"
+         class="list-group-item">
+         {{product.pname}}{{product.pid}}
+         </li>
+         </ul>
+         </div>
+         </div>
+         <ng-template #noproducts>
+            <p class="alert alert-info">
+                no product data
+            </p>

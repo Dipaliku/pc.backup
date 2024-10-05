@@ -1,0 +1,21 @@
+*{
+	padding;o;
+	margin:o;
+	box-sizing:border-box;
+}
+.box1{
+	height:400px;
+	width:400px;
+	background-color:black;
+	position:relative;
+	top:200px;
+	transform:translatex(-50%);
+}
+.box2{
+	height:100px;
+	width:100px;
+	background-color:red;
+	position:absolute;
+}
+	
+	

@@ -1,0 +1,121 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+.hero section{
+	background-color:brown;
+	height:100vh;
+}
+.navbar ul li{
+	display:inline-block;
+	margin-left:10px;
+}
+.navbar ul{
+	padding-top:15px;
+}
+
+.navbar ul li a{
+	color:#fff;
+	font-weight:4oo;
+	font-size:16px;
+	padding:10px;
+text-transform:uppercase;
+}
+.chocolate-info h1{
+	font-size:50px;
+	font-weight:bold;
+	color:#fff;
+	margin-bottom:60px;
+	text-transform:uppercase;
+}
+.chocolate-info p{
+	font-size:36px;
+	font-weight:400;
+	color:#fff;
+	margin-bottom:50px;
+}
+.chocolate-info a{
+	background-color:282828;
+	color:#fff;
+}
+.app-features{
+	padding:8px 0 100px;
+}
+.app-features .features-heading h1{
+	font-size:52px;
+	font-weight:bold;
+	color:#8a8a8a;
+	text-transform:uppercase;
+}
+.featuresinfo figure{
+	width:180px;
+	height:180px;
+	margin:0 auto 35px;
+}
+.featureinfo figure img{
+	width:100px;
+	height:100%;
+	object-fit:cover;
+}
+.featuresinfo h2{
+	font-size:24px;
+	font-weight:bold;
+	color:#lalala;
+	text-transform:uppercase;
+	margin-bottom:45px;
+}
+.featureinfo p{
+	font-size:18px;
+	font-size:400px;
+	color:5a5a5a;
+	margin-bottom:70px;
+}
+.fruitsection{
+	padding:200px 0 170px;
+	background-image:url(../images/chocolate-img.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-size:cover;
+	background-position:right;
+}
+.fruitsinfo a{
+	font-size:16px;
+	color:#fff;
+	font-weight:bold;
+	background-color:332d;
+	padding:20px 25px;
+	border-radius:40px;
+	transition:all 0.7s linear;
+}
+.fruitinfo a::hover{
+	color:#fd9332d;
+	background-color:#fff;
+	border:2px soild red;
+}
+.popularpost-section{
+	padding:120px 0 150px;
+	background-color:#2e2e38;
+}
+.popular-post -section.post-logo{
+	margin- bottom:60px;
+}
+.popularpost-section,f-list.box{
+	width:50px;
+	height:40px;
+	background-color:#ea7c3k;
+}
+.f-list h1{
+	font-size:20px;
+	font-weight:bold;
+	color:#fff;
+	text-transform:capitallize;
+}
+.f-list ul li{
+	display:table;
+	clear:both;
+	width:100px;
+}
+.f-list ul li div{
+	float:left;
+}

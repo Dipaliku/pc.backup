@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>student task using local storage
+		</title>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="./assets/css/style.css">
+		<header class="p-4 mb-4">
+		<div class="container mt-4">
+			<div class="row" class="text-white">
+				<div class="col-md-6 mb-4 mb-md-0">
+
+				<h3 class="display-4 text-white font-weight-bold">Students Form</h3>
+					<form id="stdForm" class="text-white">
+						<div class="form-group">
+							<label for="fname">First Name</label>
+							<input type="text" class ="form-control" id="fname">
+						</div>
+						
+						<div class="form-group">
+							<label for="lname" >Last Name</label>
+							<input type="text" class ="form-control" id="lname">
+						</div>
+						
+						<div class="form-group">
+							<label for="email" >Email</label>
+							<input type="text"  class ="form-control" id="email">
+						</div>
+						
+						<div class="form-group">
+							<label for="contact">Contact</label>
+							<input type="text"  class ="form-control" id="contact">
+						</div>
+						<div class="text-right">
+						<button class= "btn btn-outline-warning" d-none" id="updatebtn" type="button">update student</button> <button class= "btn btn-outline-warning" id="submitbtn" type="submit">add student</button> 
+						</div>
+						</form>
+				</div>
+		
+				
+				<div class="col-md-8">
+				<div class="table-responsive mb-5">
+				</div>
+			      <table class="table table-bordered text-white d-none" id="stdtable">				  
+			<thead>
+						<tr>
+							<th>Sr. No
+							</th>
+							
+							<th>Fisrt Name
+							</th>
+							
+							<th>Last Name
+							</th>
+							
+							<th>Email
+							</th>
+							
+							<th>Contact
+							</th>
+						</tr>
+						  <th>edit</th>
+						  <th>delete</th>
+					</thead>
+                    <tbody id="stdcontainer">
+					</tbody>
+					
+				</table>
+				<p class="alert alert-warning" id="nostdmsg">NO student is added yet !!!</p>
+				</div>
+				</div>
+				</div>
+				</header>
+	
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+		
+
+
+		<script src=./assets/js/app.js"></script>
+		</body>
+		</head>
+		</html>

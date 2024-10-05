@@ -1,0 +1,44 @@
+*{
+   padding:0;
+   margin:0;
+   box-sizing:border-box;   
+}
+
+.tabHeading{
+    background-color: red;
+    color : black;
+    padding : 0;
+    list-style: none;
+    display: flex;
+    margin-top: 20px;
+}
+
+.tabHeading li{
+    width: 25%;
+    padding: 20px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+	transition:all 0.5s linear;
+}
+
+.tabHeading li.active{
+background-color:green;   
+}
+
+.tabHeading li:hover,
+.tabHeading li:focus,
+.tabHeading li:active{
+    background-color: blue;
+}
+
+.tabContent{
+    display: none;
+}
+
+.tabContent.active{
+    display: block;
+}
+
+
+

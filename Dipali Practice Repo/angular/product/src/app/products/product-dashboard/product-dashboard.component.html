@@ -1,0 +1,9 @@
+<app-products-form>
+
+</app-products-form>
+<ng-container *ngIf="productarr; else noproddata">
+    <app-products-card [prodobj]="products" *ngFor="let product of productarr"></app-products-card>
+</ng-container>
+<ng-template #noproddata>
+    <p class="alert alert-warning">NO PRODUCTS DATA!!!</p>
+    </ng-template>

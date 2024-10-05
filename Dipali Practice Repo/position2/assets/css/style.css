@@ -1,0 +1,23 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+p{
+	background-color:black;
+	color:white;
+	padding:20px;
+	margin:20px;
+}
+.info p{
+	background-color:green;
+	color:white;
+	margin:0;
+	position:fixed;
+	top:0;
+}
+.main-section.text-info{
+	margin-top:128px;
+}
+	
+	

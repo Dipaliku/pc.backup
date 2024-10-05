@@ -1,0 +1,48 @@
+ .box1 {
+        height: 150px;
+        background-color: aqua;
+        border: 2px soild;
+        outline: auto;
+    }
+    
+    .box2 {
+        height: 150px;
+        background-color:red;
+        border: 2px solid #000000;
+        outline: auto;
+    }
+    
+    .box3 {
+        height: 150px;
+        background-color: black;
+        border: 2px solid #000000;
+        outline: auto;
+    }
+    
+    .box4 {
+        height: 150px;
+        background-color: pink;
+        border: 2px solid #000000;
+        outline: auto;
+    }
+    
+    .box5 {
+        height: 150px;
+        background-color: green;
+        border: 2px solid #000000;
+        outline: auto;
+    }
+    
+    .box21 {
+        height: 150px;
+        background-color: blue;
+        border: 2px solid #000000;
+        outline: auto;
+    }
+    
+    .box22 {
+        height: 150px;
+        background-color: yellow;
+        border: 2px solid #000000;
+        outline: auto;
+    }

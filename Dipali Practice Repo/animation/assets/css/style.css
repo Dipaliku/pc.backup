@@ -1,0 +1,97 @@
+.*{
+	padding:0;
+	margin:0;
+	box-sizzing:border-box;
+}
+.box{
+	width:100px;
+	height:100px;
+	background-color:red;
+	display:inline-block;
+	margin:100px;
+	cursor:pointer;
+}
+.box1{
+	width:100px;
+	height:100px;
+	transition:all 0.7s ease-in-out;
+}
+.info{
+	background-color:black;
+	transition:all 0.7s ease-in-out;
+	transition-origin:right;
+}
+.info:hover{
+	transform:rotate(180deg);
+}
+.box01{
+	background-color:blue;
+	transition-origin:left;
+}
+.box01:hover{
+	transform:rotate(180deg);
+}
+.box02{
+	background-color:pink;
+	padding:20px;
+}
+.box02:hover{
+	transform:perspective(200px)rotate(180deg);
+}
+.box03{
+	background-color:yellow;
+}
+.box03:hover{
+	transform:perspective(200px)rotatey(180deg);
+}
+.box04{
+background-color:orange;
+}
+.box04:hover{
+	transform:perspective(200px)rotatez(180deg);
+}
+.box05{
+	background-color:purple:
+}
+.box05:hover{
+	transform:perspective(200px)rotatex(180deg)
+	translatex(100px);
+}
+.box06{
+	background-color:yellow;
+}
+.box06:hover{
+	transform:perspective(200px)rotatey(180deg)
+	translatey(100px);
+}
+.box07{
+	background-color:violet;
+}
+.box07:hover{
+	transform:perspective(200px)rotatez(180deg)
+	translatez(100px);
+}
+.box08{
+	background-color:tan;
+}
+.box08:hover{
+	transform:perspective(200px)rotatex(180deg)
+scalex(2);
+}
+.box09{
+	background-color:gray;
+}
+.box09:hover{
+	transform:perspective(200px)rotatey(180deg)
+	scaley(2);
+}
+.box10{
+	background-color:brown;
+}
+.box10:hover{
+	transform:perspective(200px)rotate(45deg)
+	translate3d(85px,30px,90px);
+}
+	
+
+	

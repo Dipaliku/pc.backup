@@ -1,0 +1,98 @@
+:root{
+    --primary-color :#5b6986; 
+    --secondary-color : #f0e9f0;
+    --dark-color : #000000;
+    --white-color : #ffffff;
+    --base-fontsize : 1rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    color: var(--white-color);
+    font-family: "Asap", sans-serif;
+    font-optical-sizing: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+}
+
+.container{
+    width: 1000px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.heading{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.section{
+    padding: 100px 0;
+}
+
+.menu, .menu1 {
+    display: flex;
+    background-color: var(--secondary-color);
+}
+
+.menu li, .menu1 li{
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menu li a:link,
+.menu li a:visited,
+.menu1 li a:link,
+.menu1 li a:visited{
+    display: block;
+    padding: 20px;
+    text-transform: capitalize;
+    color: var(--dark-color);
+    transition: all .4s ease-in-out;
+}
+
+.menu1 li a:link,
+.menu1 li a:visited{
+    display: flex;
+    justify-content: center;
+}
+
+.menu li a:hover,
+.menu li a:focus,
+.menu li a:active,
+.menu1 li a:hover,
+.menu1 li a:focus,
+.menu1 li a:active{
+    background-color: var(--white-color);
+}
+
+.menu1 .info{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.menu1 .info h4{
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.menu1 .info p {
+    font-weight: lighter;
+    font-style: italic;
+}

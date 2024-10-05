@@ -1,0 +1,26 @@
+<h2>TODO TASK</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mb-4mb-md-0">
+     <app-todoform
+     (emmittodos)="gettodos($event)"
+     ></app-todoform>
+    </div>
+        <div class="col-md-6">
+          <!-- list -->
+           <app-todolist
+           [gettodoArray]="todoARRAY"></app-todolist>
+           <ul class="list-grroup" *ngif="todoARRAY.length >0;else NOtodo">
+            <li class="list-group-item"
+              *ngfor="let todo of todoARRAY">
+              {{todo.todoITEM}}
+            </li>
+            </ul>
+            <ng-template #NOtodos>
+              <p class="alert alert-waring">
+                NO TODO ITEM ADDED YET!!!
+              </p>
+            </ng-template>
+                </div>
+           
+      

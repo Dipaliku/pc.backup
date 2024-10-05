@@ -1,0 +1,14 @@
+<h3 class="fairheading">
+    fairs
+    </h3>
+
+    <div class="row">
+        <div class="col-md-4">
+            <app-faircards [selectedfairs]="fair" *ngfor="let fair of  fairsarr"></app-faircards>
+            </div>
+            <div class="col-md-8">
+              <app-fairdetails
+                [selectedfairs=]="selectedfair"
+                ></app-fairdetails>
+              </div>
+            </div>

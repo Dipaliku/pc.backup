@@ -1,0 +1,37 @@
+       <div class="row">
+    <div class="col-12 mb-4" *ngfor="let mobileObj of mobileArr"
+
+        [ngClass]="{
+            'cardnotavl': !mobileObj.isAvailble
+        }"
+        >
+            <div class="card-body">
+                <div class="row">
+                <div class="Col-md-4">
+                    <div class="imgcontainer">
+                    <img
+                    *ngif="mobileObj.image;else NOmobileimage"
+                    [src]="mobileObj.image"
+                     class="img-fluid"
+                     [alt]="mobileObj.name"
+                     [title]="mobileObj.name"
+                     />
+                    </div>
+                       <ng-template #nomobileimage>
+                        <img src="http://placehold.co/600*400"
+                         class="img-fluid"
+                          />
+                          </ng-template>
+            <div class="col-md-8">
+              <h3> {{mobileObj.name}}
+
+
+                    <p class="productnotavl d-flex justify-content-center" *ngIf="!mobileObj.isAvailable">
+                          product is not Availble
+                        </p>
+
+
+                </h3>
+            </div>
+
+

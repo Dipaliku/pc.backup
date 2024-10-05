@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="card-body">
+        <div class="form-group"  *ngif="isineditmode">
+            <label for="pname class="sr-only>passenger name</label>
+            <span class="shape"
+            ="{
+            'bg-danger':!passobj.checkedIn,
+             'bg-sucess':passobj.checkedIn
+            }"
+            ></span>
+            <input type="text"
+             [disabled]="!isineditmode"
+            [value]="passobj.fullname" class="form-control">
+</div>
+<!-- <p class="p-4" *ngif="!isineditmode">
+    {{passobj.fullname}}
+</p> -->
+ <p>
+    check in date:{{passobj.checkInDate? passobj.checkdat | date):'not checked in yet'}
+ </p>
+ <p>
+    children : {{passobj.children?.length}}
+    </p>
+</div>
+<div class="card-footer">
+    <button class="btn-btn-primary"
+    *ngif="!isineditmode"
+    (click)="isineditmode=true"
+    >edit</button>
+    <button class="btn-btn-primary" *ngif="isineditmode"
+    (click)="isineditmode=false; onupdate()"
+    >done</button>
+     <button class="btn-btn-primary">remove</button>  
+     </div>
+    </div> 
